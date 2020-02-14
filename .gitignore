@@ -1,0 +1,50 @@
+#################
+## VS Code
+################
+.vscode
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# Visual Studio profiler
+*.psess
+*.vsp
+
+# Click-Once directory
+publish
+
+# Others
+[Oo]bj
+sql
+TestResults
+*.Cache
+ClientBin
+stylecop.*
+~$*
+*.dbmdl
+Generated_Code #added for RIA/Silverlight projects
+dist/
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac crap
+.DS_Store
+
+############
+## NodeJS ##
+############
+logs
+*.log
+node_modules
+
+# dev bundles
+dev-bundle.css
+dev-bundle.js

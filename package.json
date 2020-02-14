@@ -1,0 +1,42 @@
+{
+  "name": "tdd-intro",
+  "version": "1.0.0",
+  "description": "Test Driven Dev/Design",
+  "main": "index.js",
+  "dependencies": {
+    "can": "^6.3.0",
+    "steal": "^2.2.4"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "standard": "^14.3.1"
+  },
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemitchel/tdd-intro.git"
+  },
+  "steal": {
+    "babelOptions": {
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
+    "paths": {
+      "can-route*src/routedata": "node_modules/can-route/src/routedata-definemap.js"
+    },
+    "plugins": [
+      "can"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikemitchel/tdd-intro/issues"
+  },
+  "homepage": "https://github.com/mikemitchel/tdd-intro#readme"
+}
