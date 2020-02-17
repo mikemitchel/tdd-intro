@@ -1,0 +1,5 @@
+    <ul>
+      {{#for (note of this.notesList)}}
+        <li>{{note.id}}: {{note.title}}</li>
+      {{/for}}
+    </ul>

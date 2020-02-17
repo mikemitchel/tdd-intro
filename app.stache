@@ -1,47 +1,13 @@
+<can-import from="~/note-board/"></can-import>
+<can-import from="~/note-panel/"></can-import>
 
 <h1>{{ this.message }}</h1>
 
-<ul>
-  {{#for (note of this.notesList)}}
-    <li>{{note.id}}: {{note.name}}</li>
-  {{/for}}
-</ul>
-
-<ul>
-  <li>
-    <a href="#">
-      <h2>Title #1</h2>
-      <p>Text Content #1</p>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <h2>Title #2</h2>
-      <p>Text Content #2</p>
-    </a>
-  </li>
-    <li>
-    <a href="#">
-      <h2>Title #3</h2>
-      <p>Text Content #1</p>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <h2>Title #4</h2>
-      <p>Text Content #2</p>
-    </a>
-  </li>
-    <li>
-    <a href="#">
-      <h2>Title #5</h2>
-      <p>Text Content #1</p>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <h2>Title #6</h2>
-      <p>Text Content #2</p>
-    </a>
-  </li>
-</ul>
+<div class="app-container">
+  <div class="note-list">
+    <note-panel notesList:to="notesList"></note-panel>
+  </div>
+  <div class="sticky-notes">
+    <note-board notesList:from="notesList"></note-board>
+  </div>
+</div>
