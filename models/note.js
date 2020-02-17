@@ -4,7 +4,8 @@ import { ObservableObject, ObservableArray, type } from "can";
 export default class Note extends ObservableObject {
   static props = {
     id: { type: type.convert(String) },
-    name: { type: type.convert(String) },
+    title: { type: type.convert(String) },
+    content: { type: type.convert(String) },
     isActive: {
       type: type.convert(Boolean),
       default: false
