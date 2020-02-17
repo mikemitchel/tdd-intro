@@ -2,18 +2,22 @@
   "name": "tdd-intro",
   "version": "1.0.0",
   "description": "Test Driven Dev/Design",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
-    "can": "^6.3.0",
-    "steal": "^2.2.4"
+    "can": "^6.3.0"
   },
   "devDependencies": {
     "http-server": "^0.12.1",
-    "standard": "^14.3.1"
+    "standard": "^14.3.1",
+    "steal": "^2.2.4",
+    "steal-css": "^1.3.2",
+    "steal-stache": "^5.0.0",
+    "steal-tools": "^2.2.6"
   },
   "scripts": {
     "start": "http-server -c-1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard '*.js' '**/*.js' --fix --env mocha"
   },
   "repository": {
     "type": "git",
@@ -29,7 +33,9 @@
       "can-route*src/routedata": "node_modules/can-route/src/routedata-definemap.js"
     },
     "plugins": [
-      "can"
+      "can",
+      "steal-css",
+      "steal-stache"
     ]
   },
   "keywords": [],
