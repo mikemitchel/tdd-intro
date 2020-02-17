@@ -18,6 +18,18 @@ class NotePanel extends StacheElement {
           { title: "test comfort zone", content: "Ask 3 dumb questions today", isActive: false, id: 7 }
         ]);
       }
+    },
+
+    setActive(note) {
+      console.log('Activate Note ', note.id)
+      // clear any active notes
+      this.notesList.forEach((note) => {
+        note.isActive = false
+      })
+      // activate clicked note
+      note.isActive = true
+      // set focus on matching sticky note
+      document.getElementById(`sticky-note-${note.id}`).focus()
     }
   }
 }

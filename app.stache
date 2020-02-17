@@ -4,10 +4,16 @@
 <h1>{{ this.message }}</h1>
 
 <div class="app-container">
-  <div class="note-list">
-    <note-panel notesList:to="notesList"></note-panel>
+  <div class="note-panel">
+    <note-panel
+      notesList:to="notesList"
+      setActive:to="setActive">
+    </note-panel>
   </div>
-  <div class="sticky-notes">
-    <note-board notesList:from="notesList"></note-board>
+  <div class="note-board">
+    <note-board
+      notesList:from="notesList"
+      setActive:from="setActive">
+    </note-board>
   </div>
 </div>

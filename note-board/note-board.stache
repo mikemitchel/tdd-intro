@@ -1,7 +1,10 @@
+
+    <can-import from="~/note-board/note-board.css"></can-import>
+
     <ul>
       {{#for (note of this.notesList)}}
-        <li>
-          <a href="#">
+        <li on:click="setActive(note)">
+          <a href="#" id="sticky-note-{{note.id}}">
             <h2>{{note.title}} #{{note.id}}</h2>
             <p>{{note.content}}</p>
           </a>
