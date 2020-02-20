@@ -1,5 +1,5 @@
 // models/todo.js
-import { ObservableObject, ObservableArray, type } from "can";
+import { ObservableObject, ObservableArray, type } from 'can'
 
 export default class Note extends ObservableObject {
   static props = {
@@ -12,8 +12,8 @@ export default class Note extends ObservableObject {
     }
   };
 
-  toggleIsActive() {
-    this.isActive = !this.isActive;
+  toggleIsActive () {
+    this.isActive = !this.isActive
   }
 }
 
@@ -21,10 +21,10 @@ export class NoteList extends ObservableArray {
   static items = type.convert(Note);
 
   static props = {
-    get active() {
+    get active () {
       return this.filter({
         isActive: false
-      });
+      })
     }
   };
 }

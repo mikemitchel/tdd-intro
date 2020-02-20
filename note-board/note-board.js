@@ -1,5 +1,5 @@
-import { StacheElement } from "can"
-import view from "./note-board.stache"
+import { StacheElement } from 'can'
+import view from './note-board.stache'
 
 class NoteBoard extends StacheElement {
   static view = view
@@ -8,4 +8,5 @@ class NoteBoard extends StacheElement {
     notesList: {}
   }
 }
-customElements.define("note-board", NoteBoard)
+
+window.customElements.define('note-board', NoteBoard)
