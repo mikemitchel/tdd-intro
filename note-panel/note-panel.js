@@ -17,12 +17,17 @@ export default class NotePanel extends StacheElement {
     console.log('Activate Note ', note.id)
     // clear any active notes
     this.notesList.forEach((note) => {
+      // clear any active notes
       note.isActive = false
+      // clear active class
+      document.getElementById(`note-item-${note.id}`).classList = ''
     })
     // activate clicked note
     note.isActive = true
     // set focus on matching sticky note
     document.getElementById(`sticky-note-${note.id}`).focus()
+    // set highlight class for note-item in list
+    document.getElementById(`note-item-${note.id}`).classList = 'active'
   }
 
   connected() {

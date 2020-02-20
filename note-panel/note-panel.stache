@@ -3,8 +3,9 @@
     <ul>
       {{#for (note of this.notesList)}}
         <li
+          id="note-item-{{note.id}}"
           on:click="setActive(note)"
-          class="{{#if(note.isActive)}}active{{/if}}">
+          class="">
           {{note.id}}: {{note.title}}
         </li>
       {{/for}}
