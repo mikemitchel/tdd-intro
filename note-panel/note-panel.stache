@@ -1,3 +1,5 @@
+<can-import from="~/note-panel/note-panel.css"></can-import>
+
     <ul>
       {{#for (note of this.notesList)}}
         <li
