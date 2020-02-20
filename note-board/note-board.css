@@ -73,8 +73,3 @@
     position:relative;
     z-index:5;
   }
-
-  ul li.active {
-    border: 2px dashed whitesmoke;
-    padding: 5px;
-  }
