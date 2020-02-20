@@ -27,7 +27,7 @@ export default class NotePanel extends StacheElement {
 
   connected() {
     // load some sample notes
-    this.notesList.assign([
+    this.notesList.update([
       { title: "write more tests!", content: "2020, the year of best practices", isActive: false, id: 1 },
       { title: "call mom", content: "ask her where my original nintendo is", isActive: false, id: 2 },
       { title: "make tacos", content: "pick up guacamole too", isActive: false, id: 3 },
