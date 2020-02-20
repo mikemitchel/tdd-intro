@@ -7,6 +7,7 @@
     "can": "^6.3.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "http-server": "^0.12.1",
     "standard": "^14.3.1",
@@ -19,8 +20,11 @@
   },
   "scripts": {
     "start": "http-server -c-1",
-    "test": "npm run lint && testee --reporter Spec --browsers firefox viewer/test/index.html",
+    "test": "npm run lint && testee --reporter Spec --browsers firefox test/index.html",
     "lint": "standard '*.js' '**/*.js' --fix --env mocha"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "repository": {
     "type": "git",
